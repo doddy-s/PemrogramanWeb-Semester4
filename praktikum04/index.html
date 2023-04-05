@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Praktikum 4 - JS Lanjutan</title>
+  </head>
+  <body>
+    <h1 id="Tanggal"></h1>
+    <h1 id="Tahun"></h1>
+    <h1 id="Math"></h1>
+    <h1 id="PI"></h1>
+    <h1 class="Text"></h1>
+    <h1 class="Query"></h1>
+    <h1 id="Name"></h1>
+    <h1 id="Name2"></h1>
+    <script>
+      //OBJECT DATE
+      const tanggal = new Date();
+
+      //Menampilkan menggunakan id
+      document.getElementById("Tanggal").innerHTML = tanggal;
+      document.getElementById("Tahun").innerHTML = tanggal.getFullYear();
+
+      //OBJECT MATH
+      let bilangan = 1.6;
+      document.getElementById("Math").innerHTML =
+        bilangan + " dibulatkan kebawah menjadi " + Math.floor(bilangan);
+      const pi = Math.PI;
+      document.getElementById("PI").innerHTML = pi;
+
+      //Menampilkan menggunakan class dan query
+      const hewwo = "Hewwo world!!";
+      document.getElementsByClassName("Text")[0].innerHTML =
+        hewwo.toUpperCase();
+      document.querySelector(".Query").innerHTML = hewwo.toLowerCase();
+
+      //Var Array
+      let names = ["ahmad1", "ahmad2", "ahmad3"];
+      document.getElementById("Name").innerHTML = names;
+
+      let names_multi = [
+        ["sambo", 55],
+        ["mario", 25],
+      ];
+      document.getElementById("Name2").innerHTML =
+        "Nama = " + names_multi[0][0] + " Umur = " + names_multi[0][1];
+
+      //Operator
+      let bil = 3;
+      let bul = 4;
+      let hasil = bil * bul;
+      console.log(hasil);
+    </script>
+  </body>
+</html>

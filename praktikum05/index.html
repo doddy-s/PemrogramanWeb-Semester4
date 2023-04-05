@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Praktikum 5 - JS Lanjutan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white">
+    <div class="flex flex-col h-auto items-center justify-center gap-12">
+      <div class="h-screen flex flex-col items-center justify-center gap-10">
+        <h1 class="text-4xl">1. Materi Event</h1>
+        <a
+          class="h-12 w-36 bg-green-500 hover:bg-green-800 rounded-none hover:rounded-3xl duration-200"
+          href=""
+          onclick="helloWorld()"
+        >
+          <p
+            class="h-full w-full flex items-center justify-center font-extrabold text-xl"
+          >
+            Click Disini
+          </p>
+        </a>
+      </div>
+
+      <div class="h-screen flex flex-col items-center justify-center gap-10">
+        <h1 class="text-4xl">2. Materi Event Kedua</h1>
+        <img
+          class="h-96 w-96"
+          onmouseover="gantiGambar(this)"
+          onmouseout="gantiGambarLagi(this)"
+          src="images/gambar01.svg"
+          alt="ini gambar"
+        />
+      </div>
+    </div>
+
+    <div class="h-screen flex flex-col items-center justify-center gap-4">
+      <h1 class="text-4xl">3. Materi Operator</h1>
+      <h2>Username</h2>
+      <input
+        type="text"
+        id="username"
+        class="text-black p-1 rounded-none focus-within:rounded-3xl duration-200"
+      />
+      <h2>Password</h2>
+      <input
+        type="password"
+        id="password"
+        class="text-black p-1 rounded-none focus-within:rounded-3xl duration-200"
+      />
+      <button
+        class="bg-green-400 px-4 py-2 rounded-none hover:rounded-3xl hover:bg-green-800 duration-200"
+        onclick="logIn()"
+      >
+        LOGIN
+      </button>
+    </div>
+
+    <div class="h-screen flex flex-col items-center justify-center gap-4">
+      <input
+        type="text"
+        oninput="cekNilai(this)"
+        placeholder="Masukkan nilai anda!"
+        class="text-black p-1 rounded-none focus-within:rounded-3xl duration-200 text-center"
+      />
+      <h2
+        id="info"
+        class="text-6xl"
+      ></h2>
+    </div>
+
+    <div class="h-screen flex flex-col items-center justify-center gap-4">
+      <h2
+        id="namaHari"
+        class="text-6xl"
+      ></h2>
+    </div>
+
+    <div class="h-screen flex flex-col items-center justify-center gap-4">
+      <h1 class="text-4xl">4. Perulangan</h1>
+      <ul id="listNama"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
